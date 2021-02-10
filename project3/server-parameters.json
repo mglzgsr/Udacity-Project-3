@@ -6,5 +6,9 @@
 	{
 		"ParameterKey": "CreatedBy",
 		"ParameterValue": "Cloudformation"
+	},
+	{
+		"ParameterKey": "KeyName",
+		"ParameterValue": "UdacityKey"
 	}
 ]
