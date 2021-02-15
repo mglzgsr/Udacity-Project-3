@@ -17,6 +17,10 @@ Parameters:
 
 Resources:
 
+  Bastion:
+    Type:
+    Properties:
+
   ProfileWithRolesForOurApp:
     Type: 'AWS::IAM::InstanceProfile'
     Properties:
@@ -83,10 +87,10 @@ Resources:
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash -xe
-          apt-get update -y
-          apt-get install unzip awscli -y
-          apt-get install apache2 -y
-          systemctl start apache2.service
+          sudo apt-get update -y
+          sudo apt-get install unzip awscli -y
+          sudo apt-get install apache2 -y
+          sudo systemctl start apache2.service
 #        aws s3 cp s3://udacity-demo-1/udacity.zip .
 #        unzip -o udacity.zip
 
@@ -186,11 +190,11 @@ Resources:
     Properties:
       Actions:
         - Type: forward
-          TargetGroupArn: !Ref 'ALBTargetGroup'
+          TargetGroupArn: !Ref ALBTargetGroup
       Conditions:
         - Field: path-pattern
           Values: [/]
-      ListenerArn: !Ref 'ALBListener'
+      ListenerArn: !Ref ALBListener
       Priority: 1
 
   ALBTargetGroup:
