@@ -16,6 +16,6 @@
 		"ParameterValue": "s3://mglzgsr-udacity-project3"
 	},
 	{
-		"ParameterKey": "S3BucketName",
+		"ParameterKey": "FileName",
 		"ParameterValue": "index.html"
 	}]

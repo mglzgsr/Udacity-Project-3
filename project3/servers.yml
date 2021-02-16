@@ -84,7 +84,7 @@ Resources:
           sudo yum install unzip awscli httpd zip unzip -y
           sudo systemctl start httpd.service
           cd /var/www/html/
-          aws s3 cp S3BucketName/FileName .
+          aws s3 cp ${S3BucketName}/${FileName} .
 #          unzip FileName
 
   WebServerSecGroup:
