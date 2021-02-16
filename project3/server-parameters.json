@@ -10,5 +10,12 @@
 	{
 		"ParameterKey": "KeyName",
 		"ParameterValue": "UdacityKey"
-	}
-]
+	},
+	{
+		"ParameterKey": "S3BucketName",
+		"ParameterValue": "s3://mglzgsr-udacity-project3"
+	},
+	{
+		"ParameterKey": "S3BucketName",
+		"ParameterValue": "index.html"
+	}]
