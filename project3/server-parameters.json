@@ -1,0 +1,21 @@
+[
+	{
+		"ParameterKey": "EnvironmentName",
+		"ParameterValue": "project-lesson-3"
+	},
+	{
+		"ParameterKey": "CreatedBy",
+		"ParameterValue": "Cloudformation"
+	},
+	{
+		"ParameterKey": "KeyName",
+		"ParameterValue": "UdacityKey"
+	},
+	{
+		"ParameterKey": "S3BucketName",
+		"ParameterValue": "s3://mglzgsr-udacity-project3"
+	},
+	{
+		"ParameterKey": "FileName",
+		"ParameterValue": "index.html"
+	}]
