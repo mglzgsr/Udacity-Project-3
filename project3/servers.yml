@@ -72,19 +72,20 @@ Resources:
       Comment: Install a simple application
     Properties:
       KeyName: !Ref KeyName
-      ImageId: ami-07dd19a7900a1f049
+      ImageId: ami-0ac73f33a1888c64a
       SecurityGroups:
         - !Ref WebServerSecGroup
       IamInstanceProfile: !Ref ProfileWithRolesForOurApp
-      InstanceType: t2.small
+      InstanceType: t3.medium
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash -xe
-          sudo yum update -y
-          sudo yum install unzip awscli httpd zip unzip -y
-          sudo systemctl start httpd.service
+          sudo apt-get update -y
+          sudo apt-get install unzip awscli -y
+          sudo apt-get install apache2 -y
+          sudo systemctl start apache2.service
           cd /var/www/html/
-          aws s3 cp ${S3BucketName}/${FileName} .
+          sudo aws s3 cp s3://mglzgsr-udacity-project3/index.html .
 #          unzip FileName
 
   WebServerSecGroup:
