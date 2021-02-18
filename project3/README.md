@@ -5,30 +5,80 @@ This folder provides the starter code for the "ND9991 - C2- Infrastructure as Co
 #### network.yml
 Cloudformation code for the network creation.
 It has the following components:
-- xx
-- xx
-- xx
+- VPC
+- PublicSubnet1
+- PublicSubnet2
+- PrivateSubnet1
+- PrivateSubnet2
+- InternetGateway
+- InternetGatewayAttachment
+- NatGateway1EIP
+- NatGateway2EIP
+- NatGateway1
+- NatGateway2
+- PublicRouteTable
+- DefaultPublicRoute
+- PublicSubnet1RouteTableAssociation
+- PublicSubnet2RouteTableAssociation
+- PrivateRouteTable1
+- PrivateRouteTable2
+- PrivateSubnet1RouteTableAssociation
+- PrivateSubnet2RouteTableAssociation
+- DefaultPrivateRoute2
+
+There are some outputs that will be needed:
+- VPC
+- VPCPublicRouteTable
+- VPCPrivateRouteTable1
+- VPCPrivateRouteTable2
+- PublicSubnets
+- PrivateSubnets
+- PublicSubnet1
+- PublicSubnet2
+- PrivateSubnet1
+- PrivateSubnet2
+
 
 #### network-parameters.json
 This file contains the parameters needed for the network creation.
 The parameters are:
-- a
-- b
-- c
+- EnvironmentName
+- CreatedBy
+- VpcCIDR
+- PublicSubnet1CIDR
+- PublicSubnet2CIDR
+- PrivateSubnet1CIDR
+- PrivateSubnet2CIDR
 
 #### servers.yml
 Cloudformation code for the server side creation.
 It has the following components:
-- xx
-- xx
-- xx
+- ProfileWithRolesForOurApp
+- RoleForOurApp
+- WebServerGroup
+- LaunchConfig
+- WebServerSecGroup
+- WebServerScaleUpPolicy
+- WebServerScaleDownPolicy
+- CPUAlarmHigh
+- CPUAlarmLow
+- ApplicationLoadBalancer
+- ALBListener
+- ALBListenerRule
+- ALBTargetGroup
+- LBSecGroup
+
+And there is one output needed, the ALB url
+- URL
 
 #### servers-parameters.json
 This file contains the parameters needed for the network creation.
 The parameters are:
-- a
-- b
-- c
+- EnvironmentName
+- CreatedBy
+- KeyName
+- S3BucketName
+- FileName
 
 ### How to use it
 There are 2 scripts created to help you.
