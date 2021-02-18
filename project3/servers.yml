@@ -61,8 +61,8 @@ Resources:
       VPCZoneIdentifier:
         - Fn::ImportValue: !Sub "${EnvironmentName}-PRIV-NETS"
       LaunchConfigurationName: !Ref LaunchConfig
-      MinSize: '1'
-      MaxSize: '2'
+      MinSize: '4'
+      MaxSize: '6'
       TargetGroupARNs:
         - !Ref ALBTargetGroup
 
