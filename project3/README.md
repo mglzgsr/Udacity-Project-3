@@ -70,6 +70,8 @@ It has the following components:
 
 And there is one output needed, the ALB url
 - URL
+  http://serve-appli-bjim6w5ux0d1-408500025.us-west-2.elb.amazonaws.com/
+  
 
 #### servers-parameters.json
 This file contains the parameters needed for the network creation.
